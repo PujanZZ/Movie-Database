@@ -1,18 +1,48 @@
 body {
-  background: #141414;
-  color: #ffffff;
-   
+  background-color: #000000;
+  color: white
 }
+
 
 .movie-app .row {
 
   flex-wrap: nowrap;
   overflow-x: auto;
   align-items: center;
-  flex-shrink: none!important;
-  
+  flex-shrink: none !important;
+
+
 }
 
 .image-container {
   width: auto;
+  margin-top: 15px;
+
 }
+
+.image-container>img {
+
+  cursor: pointer;
+  opacity: 1;
+  transition: transform 0.2s;
+  height: 10rem;
+  backface-visibility: hidden;
+}
+
+.image-container>img:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+  opacity: 0.5;
+}
+.overlay {
+
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+
+	text-align: center;
+}
+
