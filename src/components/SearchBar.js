@@ -1,28 +1,28 @@
 import React from 'react'
+import { Typography, TextField } from '@mui/material'
 
 export default function SearchBar(props) {
 
-const handleValue = (e) => {
- props.setSearchValue(e.target.value)
-}   
+    const handleValue = (e) => {
+        props.setSearchValue(e.target.value)
+    }
 
 
     return (
-        <div className='col col-sm-4'>
-            <div className="wrap">
-                <div className="search">
-                    <input 
-                    type="text" 
-                    className="searchTerm" 
-                    placeholder="Search the movie..." 
-                    value={props.value}  
-                    onChange={handleValue}  
-                    />
-                    <button type="submit" className="searchButton">
-                        <i className="fa fa-search"></i>
-                    </button>
-                </div>
+        
+            <div className="search">
+                <TextField
+                    variant='standard'
+                    style={{ backgroundColor: 'white' }}
+                    type="text"
+                    className="searchTerm"
+                    label="Search the movie..."
+                    value={props.value}
+                    onChange={handleValue}
+                />
+
             </div>
-        </div>
+
+        
     )
 }
